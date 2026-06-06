@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Tajawal } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/shared/SmoothScrollProvider";
+import MotionProvider from "@/components/shared/MotionProvider";
 import ShellWrapper from "@/components/shared/ShellWrapper";
 import Pixels from "@/components/analytics/Pixels";
 
@@ -74,9 +75,11 @@ export default function RootLayout({
         }}
       >
         <Pixels />
-        <SmoothScrollProvider>
-          <ShellWrapper>{children}</ShellWrapper>
-        </SmoothScrollProvider>
+        <MotionProvider>
+          <SmoothScrollProvider>
+            <ShellWrapper>{children}</ShellWrapper>
+          </SmoothScrollProvider>
+        </MotionProvider>
       </body>
     </html>
   );

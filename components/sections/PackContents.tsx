@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { pack } from "@/lib/data/product";
 
 const cardVariants = {
@@ -23,7 +23,7 @@ export default function PackContents() {
       <div className="max-w-6xl mx-auto px-4 md:px-6">
 
         {/* Séparateur or — coupure visuelle depuis le Hero */}
-        <motion.div
+        <m.div
           initial={{ scaleX: 0, opacity: 0 }}
           whileInView={{ scaleX: 1, opacity: 1 }}
           viewport={{ once: true, amount: 0.8 }}
@@ -34,7 +34,7 @@ export default function PackContents() {
 
         {/* En-tête */}
         <div className="text-center mb-10 md:mb-14">
-          <motion.h2
+          <m.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -49,9 +49,9 @@ export default function PackContents() {
           >
             <span style={{ color: "var(--ivory)" }}>شنو كاين </span>
             <span style={{ color: "var(--gold)" }}>فالباقة</span>
-          </motion.h2>
+          </m.h2>
 
-          <motion.p
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -63,13 +63,13 @@ export default function PackContents() {
             }}
           >
             6 قطع فعلبة هدية واحدة
-          </motion.p>
+          </m.p>
         </div>
 
         {/* Grille des cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {pack.contents.map((item, i) => (
-            <motion.div
+            <m.div
               key={item.id}
               custom={i}
               variants={cardVariants}
@@ -111,7 +111,7 @@ export default function PackContents() {
                   {item.shortTitle}
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 

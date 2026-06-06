@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ShieldCheck, Truck, Gift } from "lucide-react";
 import { pack } from "@/lib/data/product";
 import { content } from "@/lib/data/content";
@@ -41,13 +41,13 @@ export default function Hero() {
           <div className="flex-1 text-center md:text-start flex flex-col items-center md:items-start gap-0">
 
             {/* Eyebrow — brand */}
-            <motion.p
+            <m.p
               {...fadeDown(0)}
               className="mb-4 uppercase tracking-[0.25em] text-xs font-bold"
               style={{ color: "var(--gold)", fontSize: "12px" }}
             >
               {content.brand}
-            </motion.p>
+            </m.p>
 
             {/* Titre principal avec split or / ivoire */}
             <h1
@@ -55,36 +55,36 @@ export default function Hero() {
               style={{ fontSize: "clamp(3.5rem, 8vw, 7rem)", fontWeight: 900 }}
             >
               {/* "باقة ال" en or */}
-              <motion.span
+              <m.span
                 initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.6, delay: 0.05, ease: "easeOut" as const }}
                 style={{ color: "var(--gold)", display: "inline" }}
               >
                 {"باقة ال"}
-              </motion.span>
+              </m.span>
               {/* "حب" en ivoire */}
-              <motion.span
+              <m.span
                 initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" as const }}
                 style={{ color: "var(--ivory)", display: "inline" }}
               >
                 {"حب"}
-              </motion.span>
+              </m.span>
             </h1>
 
             {/* Tagline */}
-            <motion.p
+            <m.p
               {...fadeUp(0.4)}
               className="mt-4 font-medium"
               style={{ color: "var(--ivory)", opacity: 0.9, fontSize: "18px" }}
             >
               {pack.tagline}
-            </motion.p>
+            </m.p>
 
             {/* Bloc prix */}
-            <motion.div
+            <m.div
               {...fadeUp(0.8)}
               className="mt-6 flex flex-row items-baseline justify-center md:justify-start"
             >
@@ -95,11 +95,11 @@ export default function Hero() {
               >
                 {pack.price} درهم
               </span>
-            </motion.div>
+            </m.div>
 
             {/* CTA principal */}
-            <motion.div {...fadeUp(1.0)} className="mt-7">
-              <motion.button
+            <m.div {...fadeUp(1.0)} className="mt-7">
+              <m.button
                 onClick={handleScrollToForm}
                 className="rounded font-black cursor-pointer"
                 style={{
@@ -114,11 +114,11 @@ export default function Hero() {
                 transition={{ duration: 0.2 }}
               >
                 {content.cta.primary} →
-              </motion.button>
-            </motion.div>
+              </m.button>
+            </m.div>
 
             {/* Sub-features */}
-            <motion.div
+            <m.div
               className="mt-8 flex flex-row flex-wrap gap-6 justify-center md:justify-start"
               initial="hidden"
               animate="visible"
@@ -128,7 +128,7 @@ export default function Hero() {
               }}
             >
               {subFeatures.map(({ icon: Icon, label }) => (
-                <motion.div
+                <m.div
                   key={label}
                   variants={{
                     hidden: { opacity: 0, y: 16 },
@@ -147,14 +147,14 @@ export default function Hero() {
                   >
                     {label}
                   </span>
-                </motion.div>
+                </m.div>
               ))}
-            </motion.div>
+            </m.div>
           </div>
 
           {/* ── Colonne IMAGE ─────────────────────────────────────────── */}
           <div className="flex-1 w-full md:max-w-[480px]">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, scale: 1.08 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" as const }}
@@ -174,7 +174,7 @@ export default function Hero() {
                   outlineOffset: "-1px",
                 }}
               />
-            </motion.div>
+            </m.div>
           </div>
 
         </div>

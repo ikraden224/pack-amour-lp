@@ -14,7 +14,7 @@ export default function Pixels() {
       {metaPixelId && (
         <Script
           id="meta-pixel"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -36,7 +36,7 @@ export default function Pixels() {
       {tiktokPixelId && (
         <Script
           id="tiktok-pixel"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               !function(w,d,t){

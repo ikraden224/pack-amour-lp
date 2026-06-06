@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { content } from "@/lib/data/content";
 import { testimonials } from "@/lib/data/testimonials";
 
@@ -25,7 +25,7 @@ export default function Testimonials() {
 
         {/* En-tête */}
         <div className="text-center mb-10 md:mb-14">
-          <motion.h2
+          <m.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -43,9 +43,9 @@ export default function Testimonials() {
             <span>{"شهادة بعض "}</span>
             <span style={{ color: "var(--rouge)" }}>{"زبنائنا"}</span>
             <span>{" الكرام"}</span>
-          </motion.h2>
+          </m.h2>
 
-          <motion.p
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -58,13 +58,13 @@ export default function Testimonials() {
             }}
           >
             {content.testimonials.subtitle}
-          </motion.p>
+          </m.p>
         </div>
 
         {/* Grille 3 cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
           {testimonials.map((t, i) => (
-            <motion.div
+            <m.div
               key={t.id}
               custom={i}
               variants={cardVariants}
@@ -93,7 +93,7 @@ export default function Testimonials() {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { ShieldCheck, Truck, Gift, Check, Loader2 } from "lucide-react";
 import { orderSchema, OrderData, OFFERS } from "@/lib/schemas/order";
 import { pack } from "@/lib/data/product";
@@ -106,7 +106,7 @@ export default function OrderForm() {
 
         {/* ── En-tête ── */}
         <div className="text-center mb-10 md:mb-14">
-          <motion.h2
+          <m.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -116,8 +116,8 @@ export default function OrderForm() {
           >
             <span style={{ color: "var(--ivory)" }}>{"اطلب باقة الحب "}</span>
             <span style={{ color: "var(--gold)" }}>{"دابا"}</span>
-          </motion.h2>
-          <motion.p
+          </m.h2>
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -126,14 +126,14 @@ export default function OrderForm() {
             style={{ color: "rgba(248,240,227,0.7)", fontSize: "clamp(0.9375rem, 2vw, 1.0625rem)" }}
           >
             عمر الفورمولير ونتواصلو معاك
-          </motion.p>
+          </m.p>
         </div>
 
         {/* ── Grid 5 colonnes ── */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10 items-start">
 
           {/* ── Récap pack (2/5) ── */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -178,10 +178,10 @@ export default function OrderForm() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* ── Formulaire (3/5) ── */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -355,7 +355,7 @@ export default function OrderForm() {
 
               </form>
             </div>
-          </motion.div>
+          </m.div>
 
         </div>
       </div>
