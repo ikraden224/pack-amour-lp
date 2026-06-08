@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/merci"],
     },
-    sitemap: "https://pack-amour-lp.vercel.app/sitemap.xml",
+    sitemap: "https://amour.chiccadeau.shop/sitemap.xml",
   };
 }

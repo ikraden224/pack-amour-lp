@@ -14,7 +14,7 @@ const tajawal = Tajawal({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pack-amour-lp.vercel.app"),
+  metadataBase: new URL("https://amour.chiccadeau.shop"),
   title: "باقة الحب — هدية تبقى في القلب | CHICCADEAU",
   description:
     "اطلب باقة الحب الفاخرة من ChicCadeau — ساعة، سلسلة، خاتم، وأساور فعلبة هدية واحدة مغلفة وجاهزة للتقديم. الدفع عند الاستلام. توصيل 24-48 ساعة في جميع المدن المغربية.",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ar_MA",
-    url: "https://pack-amour-lp.vercel.app",
+    url: "https://amour.chiccadeau.shop",
     siteName: "ChicCadeau",
     title: "باقة الحب — هدية تبقى في القلب",
     description: "هدية فاخرة مغلفة جاهزة للتقديم. الدفع عند الاستلام. توصيل سريع.",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://pack-amour-lp.vercel.app",
+    canonical: "https://amour.chiccadeau.shop",
   },
 };
 
